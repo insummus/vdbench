@@ -1,0 +1,17 @@
+
+*
+* Copyright (c) 2000, 2012, Oracle and/or its affiliates. All rights reserved.
+*
+
+*
+* Author: Henk Vandenbergh.
+*
+
+
+*Example 7: File system testing
+
+fsd=fsd1,anchor=/Volumes/gluster-rvol0-1/acs3_mac,openflags=directio,depth=1,width=1,files=256,size=1g
+
+fwd=fwd1,fsd=fsd1,rdpct=70,xfersize=128k,fileio=random,fileselect=random,threads=8
+
+rd=rd1,fwd=fwd*,fwdrate=max,format=yes,elapsed=60,interval=1
